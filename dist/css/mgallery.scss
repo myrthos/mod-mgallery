@@ -1,0 +1,73 @@
+// Gallery CSS
+
+// Define the masonry container
+.masonry-container {
+  display: flex;
+  flex-flow: wrap;  
+  flex-direction: row;
+  width: 100%;
+  padding-right: 8px;
+  padding-left: 8px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+// Define the masonry classes for the columns 2..5
+$masonry-columns: (border-radius
+  "2": 2,
+  "3": 3,
+  "4": 4,
+  "5": 5
+) !default;
+
+@each $key, $cols in $masonry-columns {
+  .masonry-#{$key} {
+    -ms-column-count: #{$cols}; 
+    -webkit-column-count: #{$cols}; /* Chrome, Safari, Opera */
+    -moz-column-count: #{$cols}; /* Firefox */
+    column-count: #{$cols};
+  }
+}
+
+// Define the class for the different gap sizes
+$masonry-gaps: (
+  "0"  : 0,
+  "xs" : 0.1rem,
+  "s"  : 0.25rem,
+  "m"  : 0.5rem,
+  "l"  : 1rem,
+  "xl" : 1.5rem,
+  "xxl": 2rem
+) !default;
+
+// The masonry column gap
+@each $key, $gap in $masonry-gaps {
+  .masonry-gap-#{$key} {
+    -ms-column-gap: #{$gap};
+    -moz-column-gap: #{$gap};
+    -webkit-column-gap: #{$gap}; 
+    column-gap: #{$gap};  
+  }
+}
+
+// Override for grid column gap
+@each $key, $gutter in $masonry-gaps {
+  .grid-gap-#{$key} {
+    --bs-gutter-x: #{$gutter};
+  }
+}
+
+// The row padding for both grid and masonry
+@each $key, $gap in $masonry-gaps {
+  .gallery-pad-#{$key} {
+    padding-bottom: #{$gap};
+  }
+}
+
+// Define the image class in a masonry
+.masonry-1 img, .masonry-2 img, .masonry-3 img, .masonry-4 img, .masonry-5 img { 
+  flex-direction: column;
+  position: relative;
+  width: 100%; 
+}
+

@@ -21,7 +21,10 @@
     "mod:update": "hugo mod get -u ./... && npm run -s mod:vendor && npm run -s mod:tidy",
     "mod:vendor": "rimraf _vendor && hugo mod vendor",
     "mod:tidy": "hugo mod tidy && hugo mod tidy -s exampleSite",
-    "postinstall": "echo TODO: add postinstall instructions",
+    "postinstall": "npm run -s copy:css && npm run -s copy:js && npm run -s copy:images",
+    "copy:css": "cpy node_modules/lightbox2/dist/css/lightbox.css dist/css --rename=lightbox.scss --flat",
+    "copy:js": "cpy node_modules/lightbox2/dist/js/lightbox-plus-jquery.js dist/js --flat",
+    "copy:images": "cpy node_modules/lightbox2/dist/images/** dist/images --flat",
     "test": "npm run -s build"
   },
   "repository": {
@@ -39,6 +42,7 @@
     "@semantic-release/git": "^10.0.1",
     "cpy-cli": "^5.0.0",
     "hugo-bin": "^0.111.4",
+    "lightbox2": "^2.11.4",
     "rimraf": "^5.0.0",
     "semantic-release": "^21.0.7"
   },
