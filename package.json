@@ -1,7 +1,7 @@
 {
-  "name": "@gethinode/mod-template",
+  "name": "@myrthos/mod-mgallery",
   "version": "0.0.0",
-  "description": "A template to define a Hugo module compatible with Hinode",
+  "description": "A Hugo gallery module compatible with the Hinode template",
   "keywords": [
     "hugo",
     "module"
@@ -29,14 +29,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gethinode/mod-template.git"
+    "url": "git+https://github.com/myrthos/mod-mgallery.git"
   },
-  "author": "Mark Dumay",
+  "author": "Joost Mans",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/gethinode/hinode/issues"
+    "url": "https://github.com/myrthos/mod-mgallery/issues"
   },
-  "homepage": "https://gethinode.com",
+  "homepage": "https://myrthos.net",
   "devDependencies": {
     "@semantic-release/exec": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
