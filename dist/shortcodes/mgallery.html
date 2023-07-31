@@ -58,10 +58,15 @@
     "ovly"    Optional offset in pixels for the y direction of the overlay image in pixels. Will shift the image away from the corner.
               Not used for 'center'. Defaults to 0.
     "ovlperc" Optional percentage for the size of the logo related to the size of the image. By default the logo is not resized. 
+    "window"  Optional width of the window area that is available in pixels. Defaults to 872, which is the window area in Hinode.
+              The minimum width is 100.
 -->
 
 <!-- Size of the window, used to calculate the thumbnail size -->
 {{- $windowSize := 872 -}}
+{{- with .Get "window" -}}
+    {{- if gt (int .) 100 -}}{{- $windowSize = int . -}}{{- end -}}
+{{- end -}}
 
 <!-- Get the type setting  -->
 {{- $classGrid := true -}}
@@ -198,14 +203,14 @@
 <!-- Output opening gallery divs for grid -->
 {{- if $classGrid -}}
 <div class="container-fluid">
-    <div class="container-xxl flex-fill p-0">
+    <div class="flex-fill p-0">
             <div class="row grid-gap-{{ $gap }} {{ $colCard -}}">
 {{- end -}}
 
 <!-- Output opening gallery divs for masonry -->
 {{- if $classMasonry -}}
 <div class="masonry-container">
-    <div class="col-md-12">
+    <!-- <div class="col-md-12"> -->
         <div class="masonry-{{- $cols }} masonry-gap-{{ $gap -}}">
 {{- end -}}
 
@@ -347,7 +352,11 @@
 
         <!-- Add camera to credits -->
         {{- if $credits -}}
-            {{ $credits = printf "%s %s" (i18n "photoBy") $credits }}
+            {{- with (i18n "photoBy") -}}
+                {{- $credits = printf "%s %s" (i18n "photoBy") $credits -}}
+            {{- else -}}
+                {{- $credits = printf "Photo by: %s" $credits -}}
+            {{- end -}}
         {{- end -}}
         <!-- Place credits in brackets if there is both a caption and a credit -->
         {{- $break := "" -}}
@@ -357,7 +366,7 @@
 
         <!-- Output thumbnail with image link -->
         <a href="{{ $imageResult.Permalink -}}" data-lightbox="{{- $boxName -}}" data-title="{{ $caption | safeHTML }}{{ $credits | safeHTML }}">
-            <img class ="{{- if $classGrid -}}img-fluid {{ end }}{{ $radiusClass }} {{ $classUserImg -}}" src="{{ $resized.Permalink -}}" alt="{{- $caption -}}"/>
+            <img class ="img-fluid {{ $radiusClass }} {{ $classUserImg -}}" src="{{ $resized.Permalink -}}" alt="{{- $caption -}}"/>
         </a>
 
         <!-- Classes end -->   
@@ -370,7 +379,7 @@
 <!-- Output closing gallery divs for masonry -->
 {{- if $classMasonry -}}
         </div>
-    </div>
+<!--    </div> -->
 </div>
 {{- end -}}
 

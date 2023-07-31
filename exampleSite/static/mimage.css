@@ -1,0 +1,95 @@
+.ratio-3x2 {
+	--bs-aspect-ratio: 66.67%;
+}
+
+.text-italic {
+	font-style: italic;
+}
+
+.caption-right {
+	display: table-caption;
+	text-align: right;
+	caption-side: bottom;
+	line-height: 1.05rem;
+	padding: 0.1rem 0.5rem 0;
+}
+
+.caption-center {
+	display: table-caption;
+	text-align: center;
+	caption-side: bottom;
+	line-height: 1.05rem;
+	padding: 0.1rem 0.5rem 0;
+}
+
+.caption-left {
+	display: table-caption;
+	text-align: left;
+	caption-side: bottom;
+	line-height: 1.05rem;
+	padding: 0.1rem 0.5rem 0;
+}
+
+.caption-align-right {
+	text-align: right;
+	caption-side: bottom;
+	line-height: 1.05rem;
+	padding: 0.1rem 0.5rem 0;
+}
+
+.caption-align-center {
+	text-align: center;
+	caption-side: bottom;
+	line-height: 1.05rem;
+	padding: 0.1rem 0.5rem 0;
+}
+
+.caption-align-left {
+	text-align: left;
+	caption-side: bottom;
+	line-height: 1.05rem;
+	padding: 0.1rem 0.5rem 0;
+}
+
+.image-center {
+	display: table;
+	margin-left: auto;
+	margin-right: auto;
+	word-break: break-word;
+}
+
+.image-float-left {
+	display: table;
+	float: left;
+	margin-right: 7px;
+}
+
+.image-float-right {
+	display: table;
+	float: right;
+	margin-left: 7px;
+}
+
+.image-pointer {
+	cursor: pointer;
+}
+
+.image-radius-1 {
+	border-radius: 14px;
+}
+
+.image-radius-2 {
+	border-radius: 12px;
+}
+
+.image-radius-3 {
+	border-radius: 10px;
+}
+
+.image-radius-4 {
+	border-radius: 8px;
+}
+
+.image-radius-5 {
+	border-radius: 6px;
+}
