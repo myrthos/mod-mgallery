@@ -18,6 +18,7 @@
     "build": "hugo --gc --minify -s exampleSite",
     "clean": "rimraf exampleSite/public exampleSite/resources",
     "mod:clean": "hugo mod clean",
+    "mod:install": "hugo mod get ./... && npm run -s mod:vendor && npm run -s mod:tidy",
     "mod:update": "hugo mod get -u ./... && npm run -s mod:vendor && npm run -s mod:tidy",
     "mod:vendor": "rimraf _vendor && hugo mod vendor",
     "mod:tidy": "hugo mod tidy && hugo mod tidy -s exampleSite",
@@ -25,7 +26,8 @@
     "copy:css": "cpy node_modules/lightbox2/dist/css/lightbox.css dist/css --rename=lightbox.scss --flat",
     "copy:js": "cpy node_modules/lightbox2/dist/js/lightbox-plus-jquery.js dist/js --flat",
     "copy:images": "cpy node_modules/lightbox2/dist/images/** dist/images --flat",
-    "test": "npm run -s build"
+    "test": "npm run -s build",
+    "upgrade": "npx npm-check-updates -u && npm run -s mod:update"
   },
   "repository": {
     "type": "git",
