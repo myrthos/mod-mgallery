@@ -12,139 +12,56 @@
   margin-left: auto;
 }
 
-.masonry-2 {
-  -ms-column-count: 2; 
-  -webkit-column-count: 2; /* Chrome, Safari, Opera */
-  -moz-column-count: 2; /* Firefox */
-  column-count: 2;
+// Define the masonry classes for the columns 2..5
+$masonry-columns: (
+  "2": 2,
+  "3": 3,
+  "4": 4,
+  "5": 5
+) !default;
+
+@each $key, $cols in $masonry-columns {
+  .masonry-#{$key} {
+    -ms-column-count: #{$cols}; 
+    -webkit-column-count: #{$cols}; /* Chrome, Safari, Opera */
+    -moz-column-count: #{$cols}; /* Firefox */
+    column-count: #{$cols};
+  }
 }
 
-.masonry-3 {
-  -ms-column-count: 3; 
-  -webkit-column-count: 3; /* Chrome, Safari, Opera */
-  -moz-column-count: 3; /* Firefox */
-  column-count: 3;
-}
+// Define the class for the different gap sizes
+$masonry-gaps: (
+  "0"  : 0,
+  "xs" : 0.1rem,
+  "s"  : 0.25rem,
+  "m"  : 0.5rem,
+  "l"  : 1rem,
+  "xl" : 1.5rem,
+  "xxl": 2rem
+) !default;
 
-.masonry-4 {
-  -ms-column-count: 4; 
-  -webkit-column-count: 4; /* Chrome, Safari, Opera */
-  -moz-column-count: 4; /* Firefox */
-  column-count: 4;
-}
-
-.masonry-5 {
-  -ms-column-count: 5; 
-  -webkit-column-count: 5; /* Chrome, Safari, Opera */
-  -moz-column-count: 5; /* Firefox */
-  column-count: 5;
-}
-
-.masonry-gap-0 {
-  -ms-column-gap: 0;
-  -moz-column-gap: 0;
-  -webkit-column-gap: 0; 
-  column-gap: 0;  
-}
-
-.masonry-gap-xs {
-  -ms-column-gap: 0.1rem;
-  -moz-column-gap: 0.1rem;
-  -webkit-column-gap: 0.1rem; 
-  column-gap: 0.1rem;  
-}
-
-.masonry-gap-s {
-  -ms-column-gap: 0.25rem;
-  -moz-column-gap: 0.25rem;
-  -webkit-column-gap: 0.25rem; 
-  column-gap: 0.25rem;  
-}
-
-.masonry-gap-m {
-  -ms-column-gap: 0.5rem;
-  -moz-column-gap: 0.5rem;
-  -webkit-column-gap: 0.5rem; 
-  column-gap: 0.5rem;  
-}
-
-.masonry-gap-l {
-  -ms-column-gap: 1rem;
-  -moz-column-gap: 1rem;
-  -webkit-column-gap: 1rem; 
-  column-gap: 1rem;  
-}
-
-.masonry-gap-xl {
-  -ms-column-gap: 1.5rem;
-  -moz-column-gap: 1.5rem;
-  -webkit-column-gap: 1.5rem; 
-  column-gap: 1.5rem;  
-}
-
-.masonry-gap-xxl {
-  -ms-column-gap: 2rem;
-  -moz-column-gap: 2rem;
-  -webkit-column-gap: 2rem; 
-  column-gap: 2rem;  
+// The masonry column gap
+@each $key, $gap in $masonry-gaps {
+  .masonry-gap-#{$key} {
+    -ms-column-gap: #{$gap};
+    -moz-column-gap: #{$gap};
+    -webkit-column-gap: #{$gap}; 
+    column-gap: #{$gap};  
+  }
 }
 
 // Override for grid column gap
-.grid-gap-0 {
-  --bs-gutter-x: 0;
-}
-
-.grid-gap-xs {
-  --bs-gutter-x: 0.1rem;
-}
-
-.grid-gap-s {
-  --bs-gutter-x: 0.25rem;
-}
-
-.grid-gap-m {
-  --bs-gutter-x: 0.5rem;
-}
-
-.grid-gap-l {
-  --bs-gutter-x: 1rem;
-}
-
-.grid-gap-xl {
-  --bs-gutter-x: 1.5rem;
-}
-
-.grid-gap-xxl {
-  --bs-gutter-x: 2rem;
+@each $key, $gutter in $masonry-gaps {
+  .grid-gap-#{$key} {
+    --bs-gutter-x: #{$gutter};
+  }
 }
 
 // The row padding for both grid and masonry
-.gallery-pad-0 {
-  padding-bottom: 0;
-}
-
-.gallery-pad-xs {
-  padding-bottom: 0.1rem;
-}
-
-.gallery-pad-s {
-  padding-bottom: 0.25rem;
-}
-
-.gallery-pad-m {
-  padding-bottom: 0.5rem;
-}
-
-.gallery-pad-l {
-  padding-bottom: 1rem;
-}
-
-.gallery-pad-xl {
-  padding-bottom: 1.5rem;
-}
-
-.gallery-pad-xxl {
-  padding-bottom: 2rem;
+@each $key, $gap in $masonry-gaps {
+  .gallery-pad-#{$key} {
+    padding-bottom: #{$gap};
+  }
 }
 
 // Define the image class in a masonry
@@ -154,3 +71,4 @@
   width: 100%; 
 }
 
+@import "modules/mgallery/lightbox.scss";

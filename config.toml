@@ -4,28 +4,17 @@
     min = "0.110.0"
     max = ""
   [[module.mounts]]
-    source = "dist/js/lightbox-plus-jquery.js"
-    target = "assets/js/modules/lightbox/lightbox-plus-jquery.js"
+    source = "dist/js"
+    target = "assets/js/modules/mgallery"
   [[module.mounts]]
     source = "dist/css"
     target = "assets/scss"
-    includeFiles = "lightbox.scss"
   [[module.mounts]]
     source = "dist/images"
-    target = "assets/images"    
-  [[module.mounts]]
-    source = "dist/css"
-    target = "assets/scss"
-    includeFiles = "mgallery.scss"
-  [[module.mounts]]
-    source = "dist/shortcodes/mgallery.html"
-    target = "layouts/shortcodes/mgallery.html"    
+    target = "static/images"    
   [[module.mounts]]
     source = 'layouts'
     target = 'layouts'
-  [[module.mounts]]
-    source = 'assets'
-    target = 'assets'
   [[module.mounts]]
     source = 'static'
     target = 'static'
