@@ -1,0 +1,18 @@
+{{- $source := "scss/mgallery.scss" -}}
+{{- $target := "css/main.css" -}}
+
+{{ $match := "scss/**.scss" }}
+{{ $files := sort (resources.Match $match) "Key" "asc" }}
+{{ warnf "Processing pattern: %s" $match}}
+{{- range $index, $file := $files -}}
+    {{- warnf " - Processing file: %s" $file.Key }}
+{{- end -}}
+
+{{- $options := (dict "transpiler" "libsass" "targetPath" $target) -}}
+{{- $options = merge $options (dict "outputStyle" "expanded") -}}
+
+<!-- TODO: fix workaround replacing resources.Get with resources.GetMatch -->
+{{/*- $css := resources.Get $source | resources.ExecuteAsTemplate "style.app.scss" . | toCSS $options -*/}}
+{{- $css := resources.GetMatch $source | resources.ExecuteAsTemplate "style.app.scss" . | toCSS $options -}}
+
+<link rel="stylesheet" href="{{ $css.Permalink }}">

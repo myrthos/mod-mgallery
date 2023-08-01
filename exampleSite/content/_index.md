@@ -1,7 +1,7 @@
 ---
 title: Test site
 description: Site to test module shortcode(s).
-date: 2023-07-10
+date: 2023-08-01
 ---
 
-TODO: placeholder
+{{< mgallery >}}
