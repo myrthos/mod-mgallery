@@ -16,7 +16,7 @@ title = 'Test site for mod-mgallery'
   [[module.imports]]
     path = "github.com/myrthos/mod-mgallery"
     [[module.imports.mounts]]
-      source = "dist/css/lightbox.scss"
+      source = "dist/css/modules/mgallery/lightbox.scss"
       target = "static/css/lightbox.css"
     [[module.imports.mounts]]
       source = "dist/images"
