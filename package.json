@@ -23,8 +23,8 @@
     "mod:tidy": "hugo mod tidy && hugo mod tidy -s exampleSite",
     "postinstall": "npm run -s copy:css && npm run -s copy:js && npm run -s copy:js2 && npm run -s copy:images",
     "copy:css": "cpy node_modules/lightbox2/dist/css/lightbox.css dist/css/modules/mgallery --rename=lightbox.scss --flat",
-    "copy:js": "cpy node_modules/lightbox2/dist/js/lightbox-plus-jquery.js dist/js --flat",
-    "copy:js2": "cpy node_modules/lightbox2/dist/js/lightbox.js dist/js --flat",
+    "copy:js": "cpy node_modules/lightbox2/dist/js/lightbox.js dist/js --flat",
+    "copy:js2": "cpy node_modules/jquery/dist/jquery.slim.js dist/js --flat",
     "copy:images": "cpy node_modules/lightbox2/dist/images/** dist/images --flat",
     "test": "npm run -s build"
   },
@@ -75,5 +75,8 @@
         }
       ]
     ]
+  },
+  "dependencies": {
+    "jquery": "^3.7.0"
   }
 }
