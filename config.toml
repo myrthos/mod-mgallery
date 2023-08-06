@@ -6,6 +6,7 @@
   [[module.mounts]]
     source = "dist/js"
     target = "assets/js/modules/mgallery"
+    excludeFiles = "lightbox.js"
   [[module.mounts]]
     source = "dist/css"
     target = "assets/scss"
