@@ -1,5 +1,5 @@
 <!--
-    Cspell:ignore specht shortcode subfolders ovlpos ovlx ovly ovlperc errorf thumbname exif  divs bools classd classf
+    Cspell:ignore specht shortcode subfolders ovlpos ovlx ovly ovlperc errorf thumbname exif  divs bools classd classf Hinode
 
     This shortcode has originated from the work of Christian Specht: 
     https://christianspecht.de/2023/03/18/hugo-lightbox-image-gallery-renaming-processed-images/
@@ -347,7 +347,7 @@
         <!-- Determine the class to use for the image -->
         {{- $radiusClass := "" -}}
         {{- if $radius -}}
-            {{- $radiusClass = printf "image-radius-%d" $cols -}}
+            {{- $radiusClass = printf "gallery-radius-%d" $cols -}}
         {{- end -}}
 
         <!-- Add camera to credits -->

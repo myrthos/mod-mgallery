@@ -1,4 +1,5 @@
 // Gallery CSS
+// CSpell: ignore mgallery lightbox
 
 // Define the masonry container
 .masonry-container {
@@ -69,6 +70,26 @@ $masonry-gaps: (
   flex-direction: column;
   position: relative;
   width: 100%; 
+}
+
+// Define the class for the corner radius per column
+$gallery-radius: (
+  "1": 14px,
+  "2": 12px,
+  "3": 10px,
+  "4": 8px,
+  "5": 6px
+) !default;
+
+@each $key, $radius in $gallery-radius {
+  .gallery-radius-#{$key} {
+    border-radius: #{$radius};
+  }
+}
+
+// Additional ratio for bootstrap ratios
+.ratio-3x2 {
+  --bs-aspect-ratio: 66.67%;
 }
 
 @import "modules/mgallery/lightbox.scss";

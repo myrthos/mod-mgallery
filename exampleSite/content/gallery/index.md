@@ -1,11 +1,11 @@
-<!-- Cspell:ignore ovlpos ovlx ovly ovlperc lightbox mgallery -->
-<!-- markdownlint-disable MD003 MD022 MD041 -->
+<!-- Cspell:ignore ovlpos ovlx ovly ovlperc lightbox mgallery Hinode -->
+<!-- markdownlint-disable MD003 MD022 MD033 MD041 -->
 ---
 title: Gallery
 description: Example for gallery
 date: 2023-05-20
 ---
-<!-- markdownlint-enable MD003 MD022 MD041 -->
+<!-- markdownlint-enable MD022 MD041 -->
 
 To show this gallery properly in this example site, additional bootstrap classes are needed to wrap the gallery in.
 It is still not exactly the same as when using Hinode, but close enough.

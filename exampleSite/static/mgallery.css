@@ -1,4 +1,3 @@
-/* Converted from mgallery.scss file for testing purposes */
 .masonry-container {
 	display: flex;
 	flex-flow: wrap;
@@ -13,28 +12,36 @@
 .masonry-2 {
 	-ms-column-count: 2;
 	-webkit-column-count: 2;
+  /* Chrome, Safari, Opera */
 	-moz-column-count: 2;
+  /* Firefox */
 	column-count: 2;
 }
 
 .masonry-3 {
 	-ms-column-count: 3;
 	-webkit-column-count: 3;
+  /* Chrome, Safari, Opera */
 	-moz-column-count: 3;
+  /* Firefox */
 	column-count: 3;
 }
 
 .masonry-4 {
 	-ms-column-count: 4;
 	-webkit-column-count: 4;
+  /* Chrome, Safari, Opera */
 	-moz-column-count: 4;
+  /* Firefox */
 	column-count: 4;
 }
 
 .masonry-5 {
 	-ms-column-count: 5;
 	-webkit-column-count: 5;
+  /* Chrome, Safari, Opera */
 	-moz-column-count: 5;
+  /* Firefox */
 	column-count: 5;
 }
 
@@ -147,4 +154,28 @@
 	flex-direction: column;
 	position: relative;
 	width: 100%;
+}
+
+.gallery-radius-1 {
+	border-radius: 14px;
+}
+
+.gallery-radius-2 {
+	border-radius: 12px;
+}
+
+.gallery-radius-3 {
+	border-radius: 10px;
+}
+
+.gallery-radius-4 {
+	border-radius: 8px;
+}
+
+.gallery-radius-5 {
+	border-radius: 6px;
+}
+
+.ratio-3x2 {
+	--bs-aspect-ratio: 66.67%;
 }
