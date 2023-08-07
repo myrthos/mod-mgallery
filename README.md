@@ -16,7 +16,7 @@
     <a href="https://gethinode.com" alt="Hinode theme">
         <img src="https://img.shields.io/badge/theme-hinode-blue">
     </a>
-    <a href="https://github.com/myrthos/mod-mgalleryreleases" alt="Last release">
+    <a href="https://github.com/myrthos/mod-mgallery/releases" alt="Last release">
         <img src="https://img.shields.io/github/v/release/myrthos/mod-mgallery">
     </a>
     <a href="https://github.com/myrthos/mod-mgallery/releases" alt="Release date">
@@ -51,10 +51,11 @@ To install this module in a site using the Hinode theme, the following steps are
   [[module.imports]]
     path = "github.com/myrthos/mod-mgallery"
 ```
-
-1. Open the file `config/_default/params.toml` and add the following to the `[modules]` section
-    1. Add `, "mgallery` before the last bracket (`]`) of the `optional` parameter.
-2. Run `npm run mod:update` from the command line, to download the latest version of the gallery.
+<!-- Markdownlint-disable MD029 -->
+2. Open the file `config/_default/params.toml` and add the following to the `[modules]` section
+   Add `, "mgallery` before the last bracket (`]`) of the `optional` parameter.
+3. Run `npm run mod:update` from the command line, to download the latest version of the gallery.
+<!-- Markdownlint-enable MD029 -->
 
 To use the gallery, the `mgallery` shortcode is used. On the page where this shortcode is used, the following should be part of the frontmatter:
 
