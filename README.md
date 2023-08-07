@@ -26,7 +26,7 @@
         <img src="https://img.shields.io/github/last-commit/myrthos/mod-mgallery/main">
     </a>
     <a href="https://github.com/myrthos/mod-mgallery/labels/bug" alt="bugs">
-        <img src="https://img.shields.io/github/issues/myrthos/mod-mgallery/bug">development--myrthos-site.netlify.app
+        <img src="https://img.shields.io/github/issues/myrthos/mod-mgallery/bug">
     </a>
     <a href="https://github.com/myrthos/mod-mgallery/blob/main/LICENSE" alt="License">
         <img src="https://img.shields.io/github/license/myrthos/mod-mgallery">
@@ -64,7 +64,7 @@ This will enable loading the required javascript files for the gallery.
 
 ## Documentation
 
-For more information check the mgallery blog[mgalleryblog] and [documentation][mgallerydoc]
+For more information check the mgallery [blog][mgalleryblog] and [documentation][mgallerydoc]
 
 ## Hinode
 
