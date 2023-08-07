@@ -16,22 +16,22 @@
     <a href="https://gethinode.com" alt="Hinode theme">
         <img src="https://img.shields.io/badge/theme-hinode-blue">
     </a>
-    <a href="https://github.com/myrthos/myrthos-site/releases" alt="Last release">
+    <a href="https://github.com/myrthos/mod-mgalleryreleases" alt="Last release">
         <img src="https://img.shields.io/github/v/release/myrthos/mod-mgallery">
     </a>
-    <a href="https://github.com/myrthos/myrthos-site/releases" alt="Release date">
+    <a href="https://github.com/myrthos/mod-mgallery/releases" alt="Release date">
         <img src="https://img.shields.io/github/release-date/myrthos/mod-mgallery">
     </a>
-    <a href="https://github.com/myrthos/myrthos-site/commits/main" alt="Last commit">
+    <a href="https://github.com/myrthos/mod-mgallery/commits/main" alt="Last commit">
         <img src="https://img.shields.io/github/last-commit/myrthos/mod-mgallery/main">
     </a>
-    <a href="https://github.com/myrthos/myrthos-site/labels/bug" alt="bugs">
+    <a href="https://github.com/myrthos/mod-mgallery/labels/bug" alt="bugs">
         <img src="https://img.shields.io/github/issues/myrthos/mod-mgallery/bug">
     </a>
-    <a href="https://github.com/myrthos/myrthos-site/pulls" alt="Pulls">
+    <a href="https://github.com/myrthos/mod-mgallery/pulls" alt="Pulls">
         <img src="https://img.shields.io/github/issues-pr/myrthos/mod-mgallery">
     </a>
-    <a href="https://github.com/myrthos/myrthos-site/blob/main/LICENSE" alt="License">
+    <a href="https://github.com/myrthos/mod-mgallery/blob/main/LICENSE" alt="License">
         <img src="https://img.shields.io/github/license/myrthos/mod-mgallery">
     </a>
 </p>
