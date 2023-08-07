@@ -16,22 +16,22 @@
     <a href="https://gethinode.com" alt="Hinode theme">
         <img src="https://img.shields.io/badge/theme-hinode-blue">
     </a>
-    <a href="https://github.com/myrthos/myrthos-site/releases" alt="Last release">
+    <a href="https://github.com/myrthos/mod-mgallery/releases" alt="Last release">
         <img src="https://img.shields.io/github/v/release/myrthos/mod-mgallery">
     </a>
-    <a href="https://github.com/myrthos/myrthos-site/releases" alt="Release date">
+    <a href="https://github.com/myrthos/mod-mgallery/releases" alt="Release date">
         <img src="https://img.shields.io/github/release-date/myrthos/mod-mgallery">
     </a>
-    <a href="https://github.com/myrthos/myrthos-site/commits/main" alt="Last commit">
+    <a href="https://github.com/myrthos/mod-mgallery/commits/main" alt="Last commit">
         <img src="https://img.shields.io/github/last-commit/myrthos/mod-mgallery/main">
     </a>
-    <a href="https://github.com/myrthos/myrthos-site/labels/bug" alt="bugs">
+    <a href="https://github.com/myrthos/mod-mgallery/labels/bug" alt="bugs">
         <img src="https://img.shields.io/github/issues/myrthos/mod-mgallery/bug">
     </a>
-    <a href="https://github.com/myrthos/myrthos-site/pulls" alt="Pulls">
+    <a href="https://github.com/myrthos/mod-mgallery/pulls" alt="Pulls">
         <img src="https://img.shields.io/github/issues-pr/myrthos/mod-mgallery">
     </a>
-    <a href="https://github.com/myrthos/myrthos-site/blob/main/LICENSE" alt="License">
+    <a href="https://github.com/myrthos/mod-mgallery/blob/main/LICENSE" alt="License">
         <img src="https://img.shields.io/github/license/myrthos/mod-mgallery">
     </a>
 </p>
@@ -43,7 +43,7 @@ The module is intended to be used together with [Hinode](#hinode), a Hugo theme.
 
 ## Installation
 
-To install this module in a site using the Hinode theme, the following steps are needed:
+To install this module in a site using the Hinode theme, the following steps are needed on that site:
 
 1. Open the file `config/_default/hugo.toml` and add the following to the `[module]` section.
 
@@ -51,10 +51,11 @@ To install this module in a site using the Hinode theme, the following steps are
   [[module.imports]]
     path = "github.com/myrthos/mod-mgallery"
 ```
-
-1. Open the file `config/_default/params.toml` and add the following to the `[modules]` section
-    1. Add `, "mgallery` before the last bracket (`]`) of the `optional` parameter.
-2. Run `npm run mod:update` from the command line, to download the latest version of the gallery.
+<!-- Markdownlint-disable MD029 -->
+2. Open the file `config/_default/params.toml` and add the following to the `[modules]` section  
+   Add `, "mgallery"` before the last bracket (`]`) of the `optional` parameter.
+3. Run `npm run mod:update` from the command line, to download the latest version of the gallery.
+<!-- Markdownlint-enable MD029 -->
 
 To use the gallery, the `mgallery` shortcode is used. On the page where this shortcode is used, the following should be part of the frontmatter:
 
