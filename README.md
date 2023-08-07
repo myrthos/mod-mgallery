@@ -1,4 +1,4 @@
-<!-- CSpell:ignore Hinode mgallery Lightbox shortcode frontmatter  -->
+<!-- CSpell:ignore Hinode mgallery Lightbox shortcode frontmatter mgalleryblog -->
 # Hinode Module - mgallery
 
 <!-- Markdownlint-disable MD033 -->
@@ -26,10 +26,7 @@
         <img src="https://img.shields.io/github/last-commit/myrthos/mod-mgallery/main">
     </a>
     <a href="https://github.com/myrthos/mod-mgallery/labels/bug" alt="bugs">
-        <img src="https://img.shields.io/github/issues/myrthos/mod-mgallery/bug">
-    </a>
-    <a href="https://github.com/myrthos/mod-mgallery/pulls" alt="Pulls">
-        <img src="https://img.shields.io/github/issues-pr/myrthos/mod-mgallery">
+        <img src="https://img.shields.io/github/issues/myrthos/mod-mgallery/bug">development--myrthos-site.netlify.app
     </a>
     <a href="https://github.com/myrthos/mod-mgallery/blob/main/LICENSE" alt="License">
         <img src="https://img.shields.io/github/license/myrthos/mod-mgallery">
@@ -65,6 +62,10 @@ modules: ["mgallery"]
 
 This will enable loading the required javascript files for the gallery.
 
+## Documentation
+
+For more information check the mgallery blog[mgalleryblog] and [documentation][mgallerydoc]
+
 ## Hinode
 
 Hinode is a clean blog theme for [Hugo][hugo], an open-source static site generator. Hinode is available as a [template][repository_template], and a [main theme][repository]. Visit the Hinode documentation site for [installation instructions][hinode_docs].
@@ -75,3 +76,5 @@ Hinode is a clean blog theme for [Hugo][hugo], an open-source static site genera
 [repository]: https://github.com/gethinode/hinode.git
 [repository_template]: https://github.com/gethinode/template.git
 [lightbox]: https://lokeshdhakar.com/projects/lightbox2/
+[mgalleryblog]: https://myrthos.net/blog/mgallery/
+[mgallerydoc]: https://myrthos.net/docs/shortcodes/mgallery/overview/
