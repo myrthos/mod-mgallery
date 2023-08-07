@@ -52,7 +52,7 @@ To install this module in a site using the Hinode theme, the following steps are
     path = "github.com/myrthos/mod-mgallery"
 ```
 <!-- Markdownlint-disable MD029 -->
-2. Open the file `config/_default/params.toml` and add the following to the `[modules]` section
+2. Open the file `config/_default/params.toml` and add the following to the `[modules]` section  
    Add `, "mgallery` before the last bracket (`]`) of the `optional` parameter.
 3. Run `npm run mod:update` from the command line, to download the latest version of the gallery.
 <!-- Markdownlint-enable MD029 -->
