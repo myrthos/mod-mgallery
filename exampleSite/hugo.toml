@@ -30,3 +30,6 @@ title = 'Test site for mod-mgallery'
     [[module.imports.mounts]]
       source = "layouts/shortcodes/mgallery.html"
       target = "layouts/shortcodes/mgallery.html"
+    [[module.imports.mounts]]
+      source = "i18n"
+      target = "i18n"
