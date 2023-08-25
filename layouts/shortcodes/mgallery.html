@@ -58,14 +58,23 @@
     "ovly"    Optional offset in pixels for the y direction of the overlay image in pixels. Will shift the image away from the corner.
               Not used for 'center'. Defaults to 0.
     "ovlperc" Optional percentage for the size of the logo related to the size of the image. By default the logo is not resized. 
-    "window"  Optional width of the window area that is available in pixels. Defaults to 872, which is the window area in Hinode.
-              The minimum width is 100.
+    "window"  Optional width of the window area that is available in pixels. Defaults to 1400, which is the largest container-xxl size in Bootstrap.
+              When "hinode" is "false" and this value is larger than 1400, the container size is not used and the gallery will stretch the available space.
+              This will only work when this shortcode is not being used in a Hinode theme.
+              In all cases, regardless 0f the Hinode theme being used or not, "window"/"cols" determines the width of the thumbnail image that is created.
+    "hinode"  Optional setting, identifying if the Hugo Hinode theme (or a fork thereof) is being used. This can be either "true" (default) or "false". 
 -->
 
 <!-- Size of the window, used to calculate the thumbnail size -->
-{{- $windowSize := 872 -}}
+{{- $windowSize := 1400 -}}
 {{- with .Get "window" -}}
     {{- if gt (int .) 100 -}}{{- $windowSize = int . -}}{{- end -}}
+{{- end -}}
+
+<!-- Usage of Hinode theme -->
+{{- $hinode := true -}}
+{{- with .Get "hinode" -}}
+    {{- if eq . "false" -}}{{- $hinode = false -}}{{- end -}}
 {{- end -}}
 
 <!-- Get the type setting  -->
@@ -197,8 +206,16 @@
     {{ $colCard = "row-cols-1 row-cols-sm-2 row-cols-md-4" -}}
 {{- else if eq $cols 5 }}
     {{ $colCard = "row-cols-1 row-cols-sm-3 row-cols-md-5" }}
-{{ end -}}
+{{- end -}}
 
+<!-- Add additional style when not using the Hinode theme -->
+{{- if not $hinode -}}
+<div class="d-flex flex-column flex-fill">
+    {{ if lt $windowSize 1401 }}
+        <div class="container-xxl">
+    {{ end }}
+        <div class="row row-cols-1">
+{{- end -}}
 
 <!-- Output opening gallery divs for grid -->
 {{- if $classGrid -}}
@@ -211,7 +228,7 @@
 {{- if $classMasonry -}}
 <div class="masonry-container">
     <!-- <div class="col-md-12"> -->
-        <div class="masonry-{{- $cols }} masonry-gap-{{ $gap -}}">
+        <div class="masonry-{{- $cols }} masonry-gap-{{ $gap }} w-100">
 {{- end -}}
 
 <!-- Process each image -->
@@ -340,7 +357,7 @@
         {{ end -}}
  
         <!-- Classes start -->
-         <div class="col gallery-pad-{{ $gap -}}">
+         <div class="col gallery-pad-{{ $gap }}">
                 <div class="card {{ if $zoom }}card-zoom{{ end }} border-0">
                     <div class="card-img-wrap {{ $ratioClass -}}">
        
@@ -366,7 +383,7 @@
 
         <!-- Output thumbnail with image link -->
         <a href="{{ $imageResult.Permalink -}}" data-lightbox="{{- $boxName -}}" data-title="{{ $caption | safeHTML }}{{ $credits | safeHTML }}">
-            <img class ="img-fluid {{ $radiusClass }} {{ $classUserImg -}}" src="{{ $resized.Permalink -}}" alt="{{- $caption -}}"/>
+            <img class ="img-fluid w-100 {{ $radiusClass }} {{ $classUserImg -}}" src="{{ $resized.Permalink -}}" alt="{{- $caption -}}"/>
         </a>
 
         <!-- Classes end -->   
@@ -389,4 +406,12 @@
     </div>
 </div>
 {{- end -}}
-    
+
+<!-- Close additional styles when not using the Hinode theme -->
+{{- if not $hinode -}}
+        </div>
+    {{ if lt $windowSize 1401 }}
+    </div>
+    {{ end }}        
+</div>
+{{- end -}}
