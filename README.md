@@ -1,5 +1,5 @@
-<!-- CSpell:ignore Hinode mgallery Lightbox shortcode frontmatter mgalleryblog -->
-# Hinode Module - mgallery
+<!-- CSpell:ignore Hinode mgallery Lightbox shortcode frontmatter mgalleryblog Myrthos -->
+# Hugo/Hinode Module - mgallery
 
 <!-- Markdownlint-disable MD033 -->
 <!-- Tagline -->
@@ -36,31 +36,12 @@
 ## About
 
 This module takes a set of images and creates a gallery from those images. The gallery can either be organized in a grid or a vertical masonry. When an image is selected, a viewer opens, which is based on [Lightbox 2][lightbox].  
-The module is intended to be used together with [Hinode](#hinode), a Hugo theme. The module depends on Bootstrap, which is part of the Hinode theme.
+The module is intended to be used together with [Hinode](#hinode), a Hugo theme. The module depends on Bootstrap 5, which is part of the Hinode theme.  
+It should be possible to install the module on a non-Hinode theme, but that has not been tested. Usage of the module on a non-Hinode theme has been tested.
 
 ## Installation
 
-To install this module in a site using the Hinode theme, the following steps are needed on that site:
-
-1. Open the file `config/_default/hugo.toml` and add the following to the `[module]` section.
-
-```toml
-  [[module.imports]]
-    path = "github.com/myrthos/mod-mgallery"
-```
-<!-- Markdownlint-disable MD029 -->
-2. Open the file `config/_default/params.toml` and add the following to the `[modules]` section  
-   Add `, "mgallery"` before the last bracket (`]`) of the `optional` parameter.
-3. Run `npm run mod:update` from the command line, to download the latest version of the gallery.
-<!-- Markdownlint-enable MD029 -->
-
-To use the gallery, the `mgallery` shortcode is used. On the page where this shortcode is used, the following should be part of the frontmatter:
-
-```yaml
-modules: ["mgallery"]
-```
-
-This will enable loading the required javascript files for the gallery.
+See the [installation][mgalleryinstall] documentation for the necessary information on installing this module.
 
 ## Documentation
 
@@ -78,3 +59,4 @@ Hinode is a clean blog theme for [Hugo][hugo], an open-source static site genera
 [lightbox]: https://lokeshdhakar.com/projects/lightbox2/
 [mgalleryblog]: https://myrthos.net/blog/mgallery/
 [mgallerydoc]: https://myrthos.net/docs/shortcodes/mgallery/overview/
+[mgalleryinstall]: https://myrthos.net/docs/shortcodes/mgallery/installation/
