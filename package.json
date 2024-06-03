@@ -45,7 +45,7 @@
     "hugo-bin": "^0.123.2",
     "lightbox2": "^2.11.4",
     "rimraf": "^5.0.7",
-    "semantic-release": "^23.1.1"
+    "semantic-release": "^24.0.0"
   },
   "hugo-bin": {
     "buildTags": "extended"
