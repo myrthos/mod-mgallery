@@ -44,7 +44,7 @@
     "cpy-cli": "^5.0.0",
     "hugo-bin": "^0.125.2",
     "lightbox2": "^2.11.4",
-    "rimraf": "^5.0.7",
+    "rimraf": "^5.0.8",
     "semantic-release": "^24.0.0"
   },
   "hugo-bin": {
