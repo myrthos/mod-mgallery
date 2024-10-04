@@ -43,7 +43,7 @@
     "@semantic-release/git": "^10.0.1",
     "cpy-cli": "^5.0.0",
     "hugo-bin": "^0.132.0",
-    "lightbox2": "^2.11.4",
+    "lightbox2": "^2.11.5",
     "rimraf": "^6.0.1",
     "semantic-release": "^24.1.2"
   },
