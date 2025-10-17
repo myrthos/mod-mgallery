@@ -42,7 +42,7 @@
     "@semantic-release/exec": "^7.1.0",
     "@semantic-release/git": "^10.0.1",
     "cpy-cli": "^6.0.0",
-    "hugo-bin": "^0.148.1",
+    "hugo-bin": "^0.148.2",
     "lightbox2": "^2.11.5",
     "rimraf": "^6.0.1",
     "semantic-release": "^25.0.0"
